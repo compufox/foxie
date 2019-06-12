@@ -14,6 +14,9 @@ func _ready():
 func play():
 	music.play()
 
+func stop():
+	music.stop()
+
 func music_finished():
 	played = true
 
