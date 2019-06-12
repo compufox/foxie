@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/hand.gd" type="Script" id=1]
+[ext_resource path="res://sprites/pat_hand.svg" type="Texture" id=2]
+
+[node name="hand" type="KinematicBody2D" groups=[
+"hand",
+]]
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0, -30 )
+rotation = -1.5708
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -30 )
+rotation = -1.5708
+scale = Vector2( 1.74367, 1.74367 )
+polygon = PoolVector2Array( -19.0166, 19.8398, -5.489, 13.4819, 9.93246, 4.01254, 16.8315, -18.5785, -11.0353, -19.9313, -31.7325, -18.0374, -43.6368, -11.5442, -48.3715, -0.722115, -48.3715, 10.2352, -45.1249, 12.6702, -36.7377, 10.3705, -25.104, 4.55365, -19.5577, 3.47144, -16.5816, 7.39444, -20.2341, 13.076, -21.9927, 17.6754 )

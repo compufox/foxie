@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 36 36"
+   version="1.1"
+   id="svg22"
+   sodipodi:docname="fuwux.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   inkscape:export-filename="/home/ztepps/Pictures/foxes/fuwux_flower_blush.png"
+   inkscape:export-xdpi="341.32999"
+   inkscape:export-ydpi="341.32999">
+  <metadata
+     id="metadata28">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs26" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="16"
+     inkscape:cx="24.070443"
+     inkscape:cy="14.8837"
+     inkscape:window-x="1924"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg22"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <path
+     id="path866"
+     d="M 14.839848,4.753927 C 14.255009,3.185615 12.509573,2.38837 10.941548,2.973102 9.989625,3.328084 9.324881,4.11124 9.077341,5.02169 8.294111,4.495624 7.278891,4.338943 6.327256,4.693817 4.758944,5.278656 3.961592,7.0238043 4.546538,8.5924041 c 0.08284,0.2221536 0.191314,0.4268843 0.317023,0.616336 1.307766,2.3027179 4.9952,3.8714369 7.212017,3.8530699 1.687275,-1.437508 3.447496,-5.0377099 2.927734,-7.633956 -0.02845,-0.22572 -0.08052,-0.451484 -0.163467,-0.673926 z"
+     inkscape:connector-curvature="0"
+     style="fill:#dd2e44;stroke-width:0.30712116" />
+</svg>
