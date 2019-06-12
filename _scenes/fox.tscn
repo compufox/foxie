@@ -7,34 +7,34 @@
 [ext_resource path="res://sprites/flower.svg" type="Texture" id=5]
 [ext_resource path="res://sprites/heart.svg" type="Texture" id=6]
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=10]
+[sub_resource type="VisualShaderNodeScalarFunc" id=1]
 function = 0
 
-[sub_resource type="VisualShaderNodeScalarOp" id=11]
+[sub_resource type="VisualShaderNodeScalarOp" id=2]
 operator = 1
 
-[sub_resource type="VisualShaderNodeInput" id=1]
+[sub_resource type="VisualShaderNodeInput" id=3]
 input_name = "time"
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=2]
+[sub_resource type="VisualShaderNodeScalarFunc" id=4]
 function = 1
 
-[sub_resource type="VisualShaderNodeInput" id=3]
+[sub_resource type="VisualShaderNodeInput" id=5]
 input_name = "vertex"
 
-[sub_resource type="VisualShaderNodeVectorDecompose" id=4]
+[sub_resource type="VisualShaderNodeVectorDecompose" id=6]
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=5]
+[sub_resource type="VisualShaderNodeVectorCompose" id=7]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=6]
+[sub_resource type="VisualShaderNodeScalarOp" id=8]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=7]
+[sub_resource type="VisualShaderNodeScalarOp" id=9]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=12]
+[sub_resource type="VisualShaderNodeScalarOp" id=10]
 default_input_values = [ 0, 0.0, 1, 5.0 ]
 operator = 2
 
-[sub_resource type="VisualShader" id=8]
+[sub_resource type="VisualShader" id=11]
 code = "shader_type canvas_item;
 
 
@@ -104,30 +104,30 @@ graph_offset = Vector2( -876, 34 )
 mode = 1
 flags/light_only = false
 nodes/vertex/0/position = Vector2( 640, 140 )
-nodes/vertex/2/node = SubResource( 1 )
+nodes/vertex/2/node = SubResource( 3 )
 nodes/vertex/2/position = Vector2( -680, 220 )
-nodes/vertex/3/node = SubResource( 2 )
+nodes/vertex/3/node = SubResource( 4 )
 nodes/vertex/3/position = Vector2( -520, 220 )
-nodes/vertex/4/node = SubResource( 3 )
+nodes/vertex/4/node = SubResource( 5 )
 nodes/vertex/4/position = Vector2( -380, 340 )
-nodes/vertex/5/node = SubResource( 4 )
+nodes/vertex/5/node = SubResource( 6 )
 nodes/vertex/5/position = Vector2( -200, 340 )
-nodes/vertex/6/node = SubResource( 5 )
+nodes/vertex/6/node = SubResource( 7 )
 nodes/vertex/6/position = Vector2( 360, 240 )
-nodes/vertex/7/node = SubResource( 6 )
+nodes/vertex/7/node = SubResource( 8 )
 nodes/vertex/7/position = Vector2( 60, 180 )
-nodes/vertex/8/node = SubResource( 7 )
+nodes/vertex/8/node = SubResource( 9 )
 nodes/vertex/8/position = Vector2( 60, 320 )
-nodes/vertex/9/node = SubResource( 12 )
+nodes/vertex/9/node = SubResource( 10 )
 nodes/vertex/9/position = Vector2( -300, 60 )
-nodes/vertex/10/node = SubResource( 10 )
+nodes/vertex/10/node = SubResource( 1 )
 nodes/vertex/10/position = Vector2( -520, 140 )
-nodes/vertex/11/node = SubResource( 11 )
+nodes/vertex/11/node = SubResource( 2 )
 nodes/vertex/11/position = Vector2( -140, 160 )
 nodes/vertex/connections = PoolIntArray( 5, 0, 7, 1, 5, 1, 8, 1, 8, 0, 6, 1, 7, 0, 6, 0, 6, 0, 0, 0, 5, 2, 6, 2, 2, 0, 3, 0, 4, 0, 5, 0, 3, 0, 9, 0, 2, 0, 10, 0, 11, 0, 7, 0, 11, 0, 8, 0, 9, 0, 11, 0, 10, 0, 11, 1 )
 
-[sub_resource type="ShaderMaterial" id=9]
-shader = SubResource( 8 )
+[sub_resource type="ShaderMaterial" id=12]
+shader = SubResource( 11 )
 
 [node name="fox" type="Area2D"]
 script = ExtResource( 1 )
@@ -153,8 +153,8 @@ visible = false
 texture = ExtResource( 5 )
 
 [node name="heart" type="Sprite" parent="."]
-visible = false
-material = SubResource( 9 )
+material = SubResource( 12 )
+z_index = 1
 texture = ExtResource( 6 )
 [connection signal="body_entered" from="." to="." method="_on_fox_collision_entered"]
 [connection signal="body_exited" from="." to="." method="_on_fox_collision_exited"]

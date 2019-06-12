@@ -35,6 +35,7 @@ func _process(delta):
 func _on_fox_collision_entered(body):
 	if body.is_in_group("hand"):
 		being_pet = true
+		tracker.pets += 1
 
 func _on_fox_collision_exited(body):
 	if body.is_in_group("hand"):
