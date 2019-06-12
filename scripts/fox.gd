@@ -1,5 +1,6 @@
 extends Area2D
 
+var owo         = preload("res://sprites/owo.svg")
 var happy_eyes  = preload("res://sprites/nwn.svg")
 var normal_eyes = preload("res://sprites/eyes.svg")
 var sad_eyes    = preload("res://sprites/uwu.svg")
@@ -20,12 +21,15 @@ func _process(delta):
 		pet_time += delta
 	
 	# mf-ing easter egg lol
-	if pet_time >= 200 and tracker.pets == 69 and tracker.not_playing():
+	if pet_time >= 100 and tracker.pets == 2 and tracker.not_playing():
+		eyes.set_texture(owo) # actually looks a bit creepy :c
 		tracker.play()
-		
-	if pet_time >= 180:
+	
+	if pet_time >= 60 and not blush.visible:
+		# try to add a tween in here to have it fade in
 		blush.show()
-	elif pet_time >= 90:
+	elif pet_time >= 30 and not heart.visible:
+		# see above comment
 		heart.show()
 	
 	if being_pet and eyes.texture != happy_eyes:
