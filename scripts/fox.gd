@@ -19,6 +19,10 @@ func _process(delta):
 	if being_pet:
 		pet_time += delta
 	
+	# mf-ing easter egg lol
+	if pet_time >= 200 and tracker.pets == 69 and tracker.not_playing():
+		tracker.play()
+		
 	if pet_time >= 180:
 		blush.show()
 	elif pet_time >= 90:
