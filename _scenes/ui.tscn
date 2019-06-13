@@ -1,10 +1,25 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scripts/ui.gd" type="Script" id=1]
-[ext_resource path="res://sprites/hamburger_menu.svg" type="Texture" id=2]
-[ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=3]
+[ext_resource path="res://sprites/menu_arrow.svg" type="Texture" id=2]
+[ext_resource path="res://sprites/foxes_ui/fox_base.png" type="Texture" id=3]
+[ext_resource path="res://sprites/foxes_ui/transfox.png" type="Texture" id=4]
+[ext_resource path="res://sprites/foxes_ui/gayfox.png" type="Texture" id=5]
+[ext_resource path="res://sprites/foxes_ui/gayprogfox.png" type="Texture" id=6]
+[ext_resource path="res://sprites/foxes_ui/acefox.png" type="Texture" id=7]
+[ext_resource path="res://sprites/foxes_ui/arofox.png" type="Texture" id=8]
+[ext_resource path="res://sprites/foxes_ui/panfox.png" type="Texture" id=9]
+[ext_resource path="res://sprites/foxes_ui/nbfox.png" type="Texture" id=10]
+[ext_resource path="res://sprites/foxes_ui/gqfox.png" type="Texture" id=11]
+[ext_resource path="res://sprites/foxes_ui/polyamfox.png" type="Texture" id=12]
+[ext_resource path="res://sprites/foxes_ui/saphfox.png" type="Texture" id=13]
+[ext_resource path="res://sprites/foxes_ui/lesbfox.png" type="Texture" id=14]
+[ext_resource path="res://sprites/foxes_ui/intersexfox.png" type="Texture" id=15]
+[ext_resource path="res://sprites/foxes_ui/bifox.png" type="Texture" id=16]
+[ext_resource path="res://sprites/foxes_ui/agenderfox.png" type="Texture" id=17]
+[ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=18]
 
-[sub_resource type="Shader" id=8]
+[sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
 uniform bool enabled = false;
@@ -15,20 +30,20 @@ void vertex() {
 	}
 }"
 
-[sub_resource type="ShaderMaterial" id=9]
-shader = SubResource( 8 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 shader_param/enabled = false
 
-[sub_resource type="VisualShaderNodeTexture" id=1]
+[sub_resource type="VisualShaderNodeTexture" id=3]
 source = 1
 
-[sub_resource type="VisualShaderNodeInput" id=2]
+[sub_resource type="VisualShaderNodeInput" id=4]
 input_name = "screen_uv"
 
-[sub_resource type="VisualShaderNodeScalarUniform" id=3]
+[sub_resource type="VisualShaderNodeScalarUniform" id=5]
 uniform_name = "blur_amount"
 
-[sub_resource type="VisualShader" id=4]
+[sub_resource type="VisualShader" id=6]
 code = "shader_type canvas_item;
 uniform float blur_amount;
 
@@ -70,17 +85,17 @@ void light() {
 graph_offset = Vector2( -580, 78 )
 mode = 1
 flags/light_only = false
-nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/node = SubResource( 3 )
 nodes/fragment/2/position = Vector2( 160, 120 )
-nodes/fragment/3/node = SubResource( 2 )
+nodes/fragment/3/node = SubResource( 4 )
 nodes/fragment/3/position = Vector2( -80, 180 )
-nodes/fragment/4/node = SubResource( 3 )
+nodes/fragment/4/node = SubResource( 5 )
 nodes/fragment/4/position = Vector2( -80, 120 )
 nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 3, 0, 2, 0, 4, 0, 2, 1 )
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=7]
 render_priority = 5
-shader = SubResource( 4 )
+shader = SubResource( 6 )
 shader_param/blur_amount = 3.5
 
 [node name="ui" type="CanvasLayer"]
@@ -95,7 +110,7 @@ anchor_bottom = 1.0
 [node name="shop_shown" type="Position2D" parent="container"]
 
 [node name="shop_hidden" type="Position2D" parent="container"]
-position = Vector2( -470, 0 )
+position = Vector2( -494, 0 )
 
 [node name="shop and button" type="Control" parent="container"]
 margin_left = -470.0
@@ -103,7 +118,7 @@ margin_right = -430.0
 margin_bottom = 40.0
 
 [node name="shop_button" type="Button" parent="container/shop and button"]
-material = SubResource( 9 )
+material = SubResource( 2 )
 margin_left = 480.0
 margin_top = 10.0
 margin_right = 556.0
@@ -113,8 +128,8 @@ disabled = true
 icon = ExtResource( 2 )
 
 [node name="shop_bg" type="ColorRect" parent="container/shop and button"]
-editor/display_folded = true
-material = SubResource( 5 )
+material = SubResource( 7 )
+margin_left = -24.0
 margin_right = 470.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
@@ -126,95 +141,383 @@ anchor_bottom = 1.0
 scroll_horizontal_enabled = false
 
 [node name="shop" type="GridContainer" parent="container/shop and button/shop_bg/scroll_container"]
-margin_right = 470.0
+margin_right = 494.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/vseparation = 15
 custom_constants/hseparation = 15
-columns = 2
+columns = 5
 
-[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_right = 227.0
-margin_bottom = 90.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Flower - 25 pets"
+[node name="shop_item" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_right = 84.0
+margin_bottom = 130.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item"]
+margin_right = 84.0
+margin_bottom = 78.0
 icon = ExtResource( 3 )
 
-[node name="button_2" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_left = 242.0
-margin_right = 469.0
-margin_bottom = 90.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Base Fox
+- Free -"
+align = 1
 
-[node name="button_3" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_top = 105.0
-margin_right = 227.0
-margin_bottom = 195.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="shop_item_6" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 99.0
+margin_right = 183.0
+margin_bottom = 130.0
 
-[node name="button_4" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_left = 242.0
-margin_top = 105.0
-margin_right = 469.0
-margin_bottom = 195.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_6"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 4 )
 
-[node name="button_5" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_top = 210.0
-margin_right = 227.0
-margin_bottom = 300.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_6"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Trans Fox
+- Free -"
+align = 1
 
-[node name="button_6" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_left = 242.0
-margin_top = 210.0
-margin_right = 469.0
-margin_bottom = 300.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="shop_item_7" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 198.0
+margin_right = 282.0
+margin_bottom = 130.0
 
-[node name="button_7" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_top = 315.0
-margin_right = 227.0
-margin_bottom = 405.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_7"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 5 )
 
-[node name="button_8" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_left = 242.0
-margin_top = 315.0
-margin_right = 469.0
-margin_bottom = 405.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_7"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Gay Fox
+- Free -"
+align = 1
 
-[node name="button_9" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_top = 420.0
-margin_right = 227.0
-margin_bottom = 510.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="shop_item_8" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 297.0
+margin_right = 381.0
+margin_bottom = 130.0
 
-[node name="button_10" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_left = 242.0
-margin_top = 420.0
-margin_right = 469.0
-margin_bottom = 510.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_8"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 6 )
 
-[node name="button_11" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_top = 525.0
-margin_right = 227.0
-margin_bottom = 615.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_8"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 130.0
+text = "Progressive
+Gay Fox
+- Free -"
+align = 1
+
+[node name="shop_item_9" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 396.0
+margin_right = 480.0
+margin_bottom = 130.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_9"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 7 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_9"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Ace Fox
+- Free -"
+align = 1
+
+[node name="shop_item_10" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_top = 145.0
+margin_right = 84.0
+margin_bottom = 275.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_10"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 8 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_10"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Aro Fox
+- Free -"
+align = 1
+
+[node name="shop_item_11" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 99.0
+margin_top = 145.0
+margin_right = 183.0
+margin_bottom = 275.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_11"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 9 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_11"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Pan Fox
+- Free -"
+align = 1
+
+[node name="shop_item_12" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 198.0
+margin_top = 145.0
+margin_right = 282.0
+margin_bottom = 275.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_12"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 10 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_12"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Enby Fox
+- Free -"
+align = 1
+
+[node name="shop_item_13" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 297.0
+margin_top = 145.0
+margin_right = 381.0
+margin_bottom = 275.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_13"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 11 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_13"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 130.0
+text = "Gender
+Queer Fox
+- Free -"
+align = 1
+
+[node name="shop_item_14" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 396.0
+margin_top = 145.0
+margin_right = 480.0
+margin_bottom = 275.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_14"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 12 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_14"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 130.0
+text = "Polyamorous
+Fox
+- Free -"
+align = 1
+
+[node name="shop_item_15" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_top = 290.0
+margin_right = 84.0
+margin_bottom = 403.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_15"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 13 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_15"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Sapphic Fox
+- Free -"
+align = 1
+
+[node name="shop_item_16" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 99.0
+margin_top = 290.0
+margin_right = 183.0
+margin_bottom = 403.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_16"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 14 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_16"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Lesbian Fox
+- Free -"
+align = 1
+
+[node name="shop_item_17" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 198.0
+margin_top = 290.0
+margin_right = 282.0
+margin_bottom = 403.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_17"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 15 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_17"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Intersex Fox
+- Free -"
+align = 1
+
+[node name="shop_item_18" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 297.0
+margin_top = 290.0
+margin_right = 381.0
+margin_bottom = 403.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_18"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 16 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_18"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Bi Fox
+- Free -"
+align = 1
+
+[node name="shop_item_19" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 396.0
+margin_top = 290.0
+margin_right = 480.0
+margin_bottom = 403.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_19"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 17 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_19"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Agender Fox
+- Free -"
+align = 1
+
+[node name="shop_item_2" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+margin_top = 418.0
+margin_right = 84.0
+margin_bottom = 531.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_2"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 18 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_2"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Flower
+- 10 pets -"
+align = 1
+
+[node name="shop_item_3" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+margin_left = 99.0
+margin_top = 418.0
+margin_right = 183.0
+margin_bottom = 531.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_3"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 18 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_3"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Cowboy Hat
+- 25 pets -"
+align = 1
+
+[node name="shop_item_4" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+margin_left = 198.0
+margin_top = 418.0
+margin_right = 282.0
+margin_bottom = 531.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_4"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 18 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_4"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Mage Hat
+- 25 pets -"
+align = 1
+
+[node name="shop_item_5" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+margin_left = 297.0
+margin_top = 418.0
+margin_right = 381.0
+margin_bottom = 531.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_5"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 18 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_5"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
+text = "Flower Hat
+- 25 pets -"
+align = 1
 
 [node name="h_box_container" type="HBoxContainer" parent="container"]
 editor/display_folded = true
