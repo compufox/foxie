@@ -7,8 +7,6 @@
 [ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=5]
 [ext_resource path="res://sprites/emoticon_svgs/heart.svg" type="Texture" id=6]
 
-
-
 [sub_resource type="VisualShaderNodeScalarFunc" id=1]
 function = 0
 
@@ -33,7 +31,7 @@ input_name = "vertex"
 [sub_resource type="VisualShaderNodeScalarOp" id=9]
 
 [sub_resource type="VisualShaderNodeScalarOp" id=10]
-default_input_values = [ 0, 0.0, 1, 5.0 ]
+default_input_values = [ 0, 0.0, 1, 6.0 ]
 operator = 2
 
 [sub_resource type="VisualShader" id=11]
@@ -51,7 +49,7 @@ void vertex() {
 	n_out3p0 = cos(n_out2p0);
 
 // ScalarOp:9
-	float n_in9p1 = 5.00000;
+	float n_in9p1 = 6.00000;
 	float n_out9p0;
 	n_out9p0 = n_out3p0 * n_in9p1;
 
@@ -102,7 +100,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -876, 34 )
+graph_offset = Vector2( -704, 48 )
 mode = 1
 flags/light_only = false
 nodes/vertex/0/position = Vector2( 640, 140 )
@@ -159,7 +157,7 @@ texture = ExtResource( 5 )
 [node name="heart" type="Sprite" parent="."]
 visible = false
 material = SubResource( 12 )
-position = Vector2( -45.062, -45.589 )
+position = Vector2( -40.0445, -51.4427 )
 z_index = 1
 texture = ExtResource( 6 )
 [connection signal="body_entered" from="." to="." method="_on_fox_collision_entered"]
