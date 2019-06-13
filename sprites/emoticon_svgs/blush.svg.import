@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart.svg-10cdc08dffc410d4ef033f0e5e0f5724.stex"
+path="res://.import/blush.svg-67c1f385bc1eaed745bd085eb61ffa18.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/heart.svg"
-dest_files=[ "res://.import/heart.svg-10cdc08dffc410d4ef033f0e5e0f5724.stex" ]
+source_file="res://sprites/emoticon_svgs/blush.svg"
+dest_files=[ "res://.import/blush.svg-67c1f385bc1eaed745bd085eb61ffa18.stex" ]
 
 [params]
 

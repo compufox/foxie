@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flower.svg-47a79e64fd32535001d864e3792bb125.stex"
+path="res://.import/uwu.svg-4d5b06f49bfb7966d0f4861fda9642c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/flower.svg"
-dest_files=[ "res://.import/flower.svg-47a79e64fd32535001d864e3792bb125.stex" ]
+source_file="res://sprites/emoticon_svgs/uwu.svg"
+dest_files=[ "res://.import/uwu.svg-4d5b06f49bfb7966d0f4861fda9642c5.stex" ]
 
 [params]
 

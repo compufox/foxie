@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blush.svg-d2514d86a135b76ae9b6152be2183bde.stex"
+path="res://.import/fox_base.svg-34af655c322a0886f26270cceb7ded9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/blush.svg"
-dest_files=[ "res://.import/blush.svg-d2514d86a135b76ae9b6152be2183bde.stex" ]
+source_file="res://sprites/foxes/fox_base.svg"
+dest_files=[ "res://.import/fox_base.svg-34af655c322a0886f26270cceb7ded9f.stex" ]
 
 [params]
 

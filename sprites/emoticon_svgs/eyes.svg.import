@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nwn.svg-b222ef6a9dc451b9152562d4aa8b3b34.stex"
+path="res://.import/eyes.svg-b01dbc962f2677746a321f685c4aeafd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/nwn.svg"
-dest_files=[ "res://.import/nwn.svg-b222ef6a9dc451b9152562d4aa8b3b34.stex" ]
+source_file="res://sprites/emoticon_svgs/eyes.svg"
+dest_files=[ "res://.import/eyes.svg-b01dbc962f2677746a321f685c4aeafd.stex" ]
 
 [params]
 

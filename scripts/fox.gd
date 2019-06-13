@@ -1,8 +1,8 @@
 extends Area2D
 
-var happy_eyes  = preload("res://sprites/nwn.svg")
-var normal_eyes = preload("res://sprites/eyes.svg")
-var sad_eyes    = preload("res://sprites/uwu.svg")
+var happy_eyes  = preload("res://sprites/emoticon_svgs/nwn.svg")
+var normal_eyes = preload("res://sprites/emoticon_svgs/eyes.svg")
+var sad_eyes    = preload("res://sprites/emoticon_svgs/uwu.svg")
 
 onready var face = $face
 onready var eyes = $eyes

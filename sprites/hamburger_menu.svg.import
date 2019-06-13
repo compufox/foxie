@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eyes.svg-1bfbff99d5d1798b25d7504561ea8fad.stex"
+path="res://.import/hamburger_menu.svg-1fc4ab5ba80eb9d7132cc8121f9ed52c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/eyes.svg"
-dest_files=[ "res://.import/eyes.svg-1bfbff99d5d1798b25d7504561ea8fad.stex" ]
+source_file="res://sprites/hamburger_menu.svg"
+dest_files=[ "res://.import/hamburger_menu.svg-1fc4ab5ba80eb9d7132cc8121f9ed52c.stex" ]
 
 [params]
 
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=5.0
+svg/scale=1.0

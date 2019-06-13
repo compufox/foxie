@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fox_base.svg-0a1b250879f92950d31fb0bb69b39e7b.stex"
+path="res://.import/flower.svg-ec48ee7d1d94b343b7bc0f50c45a7471.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/fox_base.svg"
-dest_files=[ "res://.import/fox_base.svg-0a1b250879f92950d31fb0bb69b39e7b.stex" ]
+source_file="res://sprites/emoticon_svgs/flower.svg"
+dest_files=[ "res://.import/flower.svg-ec48ee7d1d94b343b7bc0f50c45a7471.stex" ]
 
 [params]
 
