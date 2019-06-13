@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bifox.png-51a11c0765e2b83486138800ea0a74d7.stex"
+path="res://.import/polyamfox.png-82879101869cffe1210a7e637f82e85a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/bifox.png"
-dest_files=[ "res://.import/bifox.png-51a11c0765e2b83486138800ea0a74d7.stex" ]
+source_file="res://sprites/foxes_base/polyamfox.png"
+dest_files=[ "res://.import/polyamfox.png-82879101869cffe1210a7e637f82e85a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/transfox.png-ce4ebaa792a263fdd009721818416efd.stex"
+path="res://.import/panfox.png-72bb073d2b0f2293b5e149c0e92b7d7c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/transfox.png"
-dest_files=[ "res://.import/transfox.png-ce4ebaa792a263fdd009721818416efd.stex" ]
+source_file="res://sprites/foxes_base/panfox.png"
+dest_files=[ "res://.import/panfox.png-72bb073d2b0f2293b5e149c0e92b7d7c.stex" ]
 
 [params]
 

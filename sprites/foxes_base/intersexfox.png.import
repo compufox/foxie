@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/intersexfox.png-1432d11b7754de94e9109acdcc2a6d1a.stex"
+path="res://.import/intersexfox.png-7dad6e10cd65775fca1ec0bd15bcdd91.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/intersexfox.png"
-dest_files=[ "res://.import/intersexfox.png-1432d11b7754de94e9109acdcc2a6d1a.stex" ]
+source_file="res://sprites/foxes_base/intersexfox.png"
+dest_files=[ "res://.import/intersexfox.png-7dad6e10cd65775fca1ec0bd15bcdd91.stex" ]
 
 [params]
 

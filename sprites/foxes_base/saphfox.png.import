@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/polyamfox.png-915c86f7b2d03f5986a5000fe6fee94f.stex"
+path="res://.import/saphfox.png-9e7b22a2149c317976c17afd18871304.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/polyamfox.png"
-dest_files=[ "res://.import/polyamfox.png-915c86f7b2d03f5986a5000fe6fee94f.stex" ]
+source_file="res://sprites/foxes_base/saphfox.png"
+dest_files=[ "res://.import/saphfox.png-9e7b22a2149c317976c17afd18871304.stex" ]
 
 [params]
 

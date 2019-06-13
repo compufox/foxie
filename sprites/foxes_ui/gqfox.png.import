@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arofox.png-7aff2040c250151ff1774fff418536a4.stex"
+path="res://.import/gqfox.png-6b377d568db5426d0a6d6d51dfc62698.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/arofox.png"
-dest_files=[ "res://.import/arofox.png-7aff2040c250151ff1774fff418536a4.stex" ]
+source_file="res://sprites/foxes_ui/gqfox.png"
+dest_files=[ "res://.import/gqfox.png-6b377d568db5426d0a6d6d51dfc62698.stex" ]
 
 [params]
 

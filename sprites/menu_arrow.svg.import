@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hamburger_menu.svg-1fc4ab5ba80eb9d7132cc8121f9ed52c.stex"
+path="res://.import/menu_arrow.svg-4e96cff9d9ff03055bbf6ecce3eef7a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hamburger_menu.svg"
-dest_files=[ "res://.import/hamburger_menu.svg-1fc4ab5ba80eb9d7132cc8121f9ed52c.stex" ]
+source_file="res://sprites/menu_arrow.svg"
+dest_files=[ "res://.import/menu_arrow.svg-4e96cff9d9ff03055bbf6ecce3eef7a1.stex" ]
 
 [params]
 

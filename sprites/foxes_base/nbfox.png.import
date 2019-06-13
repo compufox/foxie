@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/acefox.png-aa2cf492092a25e7f2fb713b857cc04d.stex"
+path="res://.import/nbfox.png-dcf078d634de9f18e238b2571cd2e7db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/acefox.png"
-dest_files=[ "res://.import/acefox.png-aa2cf492092a25e7f2fb713b857cc04d.stex" ]
+source_file="res://sprites/foxes_base/nbfox.png"
+dest_files=[ "res://.import/nbfox.png-dcf078d634de9f18e238b2571cd2e7db.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gayfox.png-4405579882e5eb0dc29a23ae8b6c21a3.stex"
+path="res://.import/gayfox.png-567fbea6a61ebb3171d2cefdda4c86c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/foxes/gayfox.png"
-dest_files=[ "res://.import/gayfox.png-4405579882e5eb0dc29a23ae8b6c21a3.stex" ]
+source_file="res://sprites/foxes_base/gayfox.png"
+dest_files=[ "res://.import/gayfox.png-567fbea6a61ebb3171d2cefdda4c86c6.stex" ]
 
 [params]
 
