@@ -148,7 +148,7 @@ texture = ExtResource( 3 )
 texture = ExtResource( 4 )
 
 [node name="hat" type="Sprite" parent="."]
-position = Vector2( 0, -40 )
+position = Vector2( 0, -60 )
 
 [node name="flower" type="Sprite" parent="."]
 visible = false

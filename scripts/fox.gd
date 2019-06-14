@@ -67,4 +67,10 @@ func set_face(face_num):
 	face.set_texture(load(Info.faces[face_num]))
 
 func set_hat(hat_num):
-	pass#hat.set_texture(load(Info.hats[hat_num]))
+	var new_hat = load(Info.hats[hat_num])
+	
+	# a 'toggle' for the hats
+	if hat.get_texture() != new_hat:
+		hat.set_texture(new_hat)
+	else:
+		hat.set_texture(null)
