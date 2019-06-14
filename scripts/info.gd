@@ -4,6 +4,7 @@ extends Node
 var faces = [
 	"res://sprites/foxes_base/fox_base.svg",
 	"res://sprites/foxes_base/xenon.svg",
+	"res://sprites/foxes_base/computerfox.svg",
 	"res://sprites/foxes_base/transfox.png",
 	"res://sprites/foxes_base/gayfox.png",
 	"res://sprites/foxes_base/gayprogfox.png",
@@ -22,14 +23,14 @@ var faces = [
 
 # warning-ignore:unused_class_variable
 var hats = [
-	"res://sprites/hats/cowboy.png",
-	"res://sprites/hats/mage.png",
-	"res://sprites/hats/flower.png"
+	"res://sprites/hats/cowboyhat.svg",
+	"res://sprites/hats/mage_hat.svg",
+	"res://sprites/hats/flower_hat.svg"
 ]
 
 # warning-ignore:unused_class_variable
 var prices = [
-	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-	25,
-	50,50,50
+	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	10,
+	25,25,25
 ]

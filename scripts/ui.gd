@@ -78,9 +78,9 @@ func _shop_item_selected(item_num, item_price):
 	# 16 is the flower, which is already there but hidden
 	
 	if Tracker.pets >= item_price:
-		if item_num < 16:
+		if item_num < 17:
 			fox.set_face(item_num)
-		elif item_num == 16:
+		elif item_num == 17:
 			fox.show_flower()
-		elif item_num > 16:
-			fox.set_hat(item_num)
+		elif item_num > 17:
+			fox.set_hat(item_num - 18)

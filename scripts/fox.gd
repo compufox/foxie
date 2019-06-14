@@ -1,8 +1,8 @@
 extends Area2D
 
-var happy_eyes  = preload("res://sprites/emoticon_svgs/nwn.svg")
-var normal_eyes = preload("res://sprites/emoticon_svgs/eyes.svg")
-var sad_eyes    = preload("res://sprites/emoticon_svgs/uwu.svg")
+var happy_eyes  = preload("res://textures/nwn.svg")
+var normal_eyes = preload("res://textures/eyes.svg")
+var sad_eyes    = preload("res://textures/uwu.svg")
 
 onready var face = $face setget set_face
 onready var eyes = $eyes
@@ -27,7 +27,7 @@ func _process(delta):
 		
 		# mf-ing easter egg lol
 		if pet_time >= 100 and Tracker.pets == 69 and Tracker.not_playing():
-			eyes.set_texture(sad_eyes) # actually looks a bit creepy :c
+			eyes.set_texture(sad_eyes) 
 			Tracker.play()
 	
 		if pet_time >= 60 and not blush.visible:

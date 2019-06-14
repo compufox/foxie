@@ -1,26 +1,30 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scripts/ui.gd" type="Script" id=1]
-[ext_resource path="res://sprites/menu_arrow.svg" type="Texture" id=2]
-[ext_resource path="res://sprites/shop_bg.svg" type="Texture" id=3]
+[ext_resource path="res://textures/menu_arrow.svg" type="Texture" id=2]
+[ext_resource path="res://textures/shop_bg.svg" type="Texture" id=3]
 [ext_resource path="res://sprites/foxes_ui/fox_base.png" type="Texture" id=4]
 [ext_resource path="res://sprites/foxes_ui/xenon.png" type="Texture" id=5]
-[ext_resource path="res://sprites/foxes_ui/transfox.png" type="Texture" id=6]
-[ext_resource path="res://sprites/foxes_ui/gayfox.png" type="Texture" id=7]
-[ext_resource path="res://sprites/foxes_ui/gayprogfox.png" type="Texture" id=8]
-[ext_resource path="res://sprites/foxes_ui/acefox.png" type="Texture" id=9]
-[ext_resource path="res://sprites/foxes_ui/arofox.png" type="Texture" id=10]
-[ext_resource path="res://sprites/foxes_ui/panfox.png" type="Texture" id=11]
-[ext_resource path="res://sprites/foxes_ui/nbfox.png" type="Texture" id=12]
-[ext_resource path="res://sprites/foxes_ui/gqfox.png" type="Texture" id=13]
-[ext_resource path="res://sprites/foxes_ui/polyamfox.png" type="Texture" id=14]
-[ext_resource path="res://sprites/foxes_ui/saphfox.png" type="Texture" id=15]
-[ext_resource path="res://sprites/foxes_ui/lesbfox.png" type="Texture" id=16]
-[ext_resource path="res://sprites/foxes_ui/intersexfox.png" type="Texture" id=17]
-[ext_resource path="res://sprites/foxes_ui/bifox.png" type="Texture" id=18]
-[ext_resource path="res://sprites/foxes_ui/agenderfox.png" type="Texture" id=19]
-[ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=20]
-[ext_resource path="res://sprites/info.svg" type="Texture" id=21]
+[ext_resource path="res://sprites/foxes_ui/computer_fox.png" type="Texture" id=6]
+[ext_resource path="res://sprites/foxes_ui/transfox.png" type="Texture" id=7]
+[ext_resource path="res://sprites/foxes_ui/gayfox.png" type="Texture" id=8]
+[ext_resource path="res://sprites/foxes_ui/gayprogfox.png" type="Texture" id=9]
+[ext_resource path="res://sprites/foxes_ui/acefox.png" type="Texture" id=10]
+[ext_resource path="res://sprites/foxes_ui/arofox.png" type="Texture" id=11]
+[ext_resource path="res://sprites/foxes_ui/panfox.png" type="Texture" id=12]
+[ext_resource path="res://sprites/foxes_ui/nbfox.png" type="Texture" id=13]
+[ext_resource path="res://sprites/foxes_ui/gqfox.png" type="Texture" id=14]
+[ext_resource path="res://sprites/foxes_ui/polyamfox.png" type="Texture" id=15]
+[ext_resource path="res://sprites/foxes_ui/saphfox.png" type="Texture" id=16]
+[ext_resource path="res://sprites/foxes_ui/lesbfox.png" type="Texture" id=17]
+[ext_resource path="res://sprites/foxes_ui/intersexfox.png" type="Texture" id=18]
+[ext_resource path="res://sprites/foxes_ui/bifox.png" type="Texture" id=19]
+[ext_resource path="res://sprites/foxes_ui/agenderfox.png" type="Texture" id=20]
+[ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=21]
+[ext_resource path="res://sprites/hats_ui/cowboy_hat.png" type="Texture" id=22]
+[ext_resource path="res://sprites/hats_ui/mage_hat.png" type="Texture" id=23]
+[ext_resource path="res://sprites/hats_ui/flower_hat.png" type="Texture" id=24]
+[ext_resource path="res://textures/info.svg" type="Texture" id=25]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -116,7 +120,6 @@ anchor_bottom = 1.0
 position = Vector2( -494, 0 )
 
 [node name="shop and button" type="Control" parent="container"]
-editor/display_folded = true
 margin_left = -494.0
 margin_right = -454.0
 margin_bottom = 40.0
@@ -143,15 +146,11 @@ patch_margin_right = 18
 patch_margin_bottom = 19
 
 [node name="shop_bg" type="ColorRect" parent="container/shop and button"]
-editor/display_folded = true
 material = SubResource( 7 )
 margin_right = 494.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="scroll_container" type="ScrollContainer" parent="container/shop and button/shop_bg"]
 anchor_right = 1.0
@@ -209,7 +208,6 @@ text = "Slime Fox
 align = 1
 
 [node name="shop_item_20" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
-editor/display_folded = true
 margin_left = 198.0
 margin_right = 282.0
 margin_bottom = 113.0
@@ -223,20 +221,39 @@ icon = ExtResource( 6 )
 margin_top = 82.0
 margin_right = 84.0
 margin_bottom = 113.0
+text = "Computer Fox
+- Free -"
+align = 1
+
+[node name="shop_item_21" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
+editor/display_folded = true
+margin_left = 297.0
+margin_right = 381.0
+margin_bottom = 113.0
+
+[node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_21"]
+margin_right = 84.0
+margin_bottom = 78.0
+icon = ExtResource( 7 )
+
+[node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_21"]
+margin_top = 82.0
+margin_right = 84.0
+margin_bottom = 113.0
 text = "Trans Fox
 - Free -"
 align = 1
 
 [node name="shop_item_7" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
-margin_right = 381.0
-margin_bottom = 113.0
+margin_top = 128.0
+margin_right = 84.0
+margin_bottom = 258.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_7"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 7 )
+icon = ExtResource( 8 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_7"]
 margin_top = 82.0
@@ -248,14 +265,15 @@ align = 1
 
 [node name="shop_item_8" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
+margin_left = 99.0
 margin_top = 128.0
-margin_right = 84.0
+margin_right = 183.0
 margin_bottom = 258.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_8"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 8 )
+icon = ExtResource( 9 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_8"]
 margin_top = 82.0
@@ -268,15 +286,15 @@ align = 1
 
 [node name="shop_item_9" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 99.0
+margin_left = 198.0
 margin_top = 128.0
-margin_right = 183.0
+margin_right = 282.0
 margin_bottom = 258.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_9"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 9 )
+icon = ExtResource( 10 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_9"]
 margin_top = 82.0
@@ -288,15 +306,15 @@ align = 1
 
 [node name="shop_item_10" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 198.0
+margin_left = 297.0
 margin_top = 128.0
-margin_right = 282.0
+margin_right = 381.0
 margin_bottom = 258.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_10"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 10 )
+icon = ExtResource( 11 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_10"]
 margin_top = 82.0
@@ -308,15 +326,14 @@ align = 1
 
 [node name="shop_item_11" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
-margin_top = 128.0
-margin_right = 381.0
-margin_bottom = 258.0
+margin_top = 273.0
+margin_right = 84.0
+margin_bottom = 403.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_11"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 11 )
+icon = ExtResource( 12 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_11"]
 margin_top = 82.0
@@ -328,14 +345,15 @@ align = 1
 
 [node name="shop_item_12" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
+margin_left = 99.0
 margin_top = 273.0
-margin_right = 84.0
+margin_right = 183.0
 margin_bottom = 403.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_12"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 12 )
+icon = ExtResource( 13 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_12"]
 margin_top = 82.0
@@ -347,15 +365,15 @@ align = 1
 
 [node name="shop_item_13" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 99.0
+margin_left = 198.0
 margin_top = 273.0
-margin_right = 183.0
+margin_right = 282.0
 margin_bottom = 403.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_13"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 13 )
+icon = ExtResource( 14 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_13"]
 margin_top = 82.0
@@ -368,15 +386,15 @@ align = 1
 
 [node name="shop_item_14" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 198.0
+margin_left = 297.0
 margin_top = 273.0
-margin_right = 282.0
+margin_right = 381.0
 margin_bottom = 403.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_14"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 14 )
+icon = ExtResource( 15 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_14"]
 margin_top = 82.0
@@ -389,15 +407,14 @@ align = 1
 
 [node name="shop_item_15" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
-margin_top = 273.0
-margin_right = 381.0
-margin_bottom = 403.0
+margin_top = 418.0
+margin_right = 84.0
+margin_bottom = 531.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_15"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 15 )
+icon = ExtResource( 16 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_15"]
 margin_top = 82.0
@@ -409,14 +426,15 @@ align = 1
 
 [node name="shop_item_16" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
+margin_left = 99.0
 margin_top = 418.0
-margin_right = 84.0
+margin_right = 183.0
 margin_bottom = 531.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_16"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 16 )
+icon = ExtResource( 17 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_16"]
 margin_top = 82.0
@@ -428,15 +446,15 @@ align = 1
 
 [node name="shop_item_17" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 99.0
+margin_left = 198.0
 margin_top = 418.0
-margin_right = 183.0
+margin_right = 282.0
 margin_bottom = 531.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_17"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 17 )
+icon = ExtResource( 18 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_17"]
 margin_top = 82.0
@@ -448,15 +466,15 @@ align = 1
 
 [node name="shop_item_18" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 198.0
+margin_left = 297.0
 margin_top = 418.0
-margin_right = 282.0
+margin_right = 381.0
 margin_bottom = 531.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_18"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 18 )
+icon = ExtResource( 19 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_18"]
 margin_top = 82.0
@@ -468,15 +486,14 @@ align = 1
 
 [node name="shop_item_19" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
-margin_top = 418.0
-margin_right = 381.0
-margin_bottom = 531.0
+margin_top = 546.0
+margin_right = 84.0
+margin_bottom = 659.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_19"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 19 )
+icon = ExtResource( 20 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_19"]
 margin_top = 82.0
@@ -487,15 +504,15 @@ text = "Agender Fox
 align = 1
 
 [node name="shop_item_2" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
-editor/display_folded = true
+margin_left = 99.0
 margin_top = 546.0
-margin_right = 84.0
+margin_right = 183.0
 margin_bottom = 659.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_2"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 20 )
+icon = ExtResource( 21 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_2"]
 margin_top = 82.0
@@ -506,16 +523,15 @@ text = "Flower
 align = 1
 
 [node name="shop_item_3" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
-editor/display_folded = true
-margin_left = 99.0
+margin_left = 198.0
 margin_top = 546.0
-margin_right = 183.0
+margin_right = 282.0
 margin_bottom = 659.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_3"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 20 )
+icon = ExtResource( 22 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_3"]
 margin_top = 82.0
@@ -526,16 +542,15 @@ text = "Cowboy Hat
 align = 1
 
 [node name="shop_item_4" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
-editor/display_folded = true
-margin_left = 198.0
+margin_left = 297.0
 margin_top = 546.0
-margin_right = 282.0
+margin_right = 381.0
 margin_bottom = 659.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_4"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 20 )
+icon = ExtResource( 23 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_4"]
 margin_top = 82.0
@@ -546,16 +561,14 @@ text = "Mage Hat
 align = 1
 
 [node name="shop_item_5" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
-editor/display_folded = true
-margin_left = 297.0
-margin_top = 546.0
-margin_right = 381.0
-margin_bottom = 659.0
+margin_top = 674.0
+margin_right = 84.0
+margin_bottom = 787.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_5"]
 margin_right = 84.0
 margin_bottom = 78.0
-icon = ExtResource( 20 )
+icon = ExtResource( 24 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_5"]
 margin_top = 82.0
@@ -597,7 +610,7 @@ margin_top = -91.6177
 margin_right = -21.8529
 margin_bottom = -21.6177
 rect_pivot_offset = Vector2( 38, 35 )
-icon = ExtResource( 21 )
+icon = ExtResource( 25 )
 
 [node name="tween" type="Tween" parent="."]
 [connection signal="pressed" from="container/shop and button/shop_button" to="." method="_on_shop_button_pressed"]

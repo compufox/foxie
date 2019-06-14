@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933334"
+   version="1.1"
+   id="svg139"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="cowboyhat.svg"
+   inkscape:export-filename="/home/ztepps/Documents/Godot/foxie/sprites/hats_ui/cowboy_hat.png"
+   inkscape:export-xdpi="108"
+   inkscape:export-ydpi="108">
+  <defs
+     id="defs133" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="49.008852"
+     inkscape:cy="14.72793"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="1924"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata136">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-280.06665)">
+    <g
+       id="g110"
+       transform="matrix(0.58468896,0,0,0.58468896,-2.0793752,284.97562)">
+      <path
+         sodipodi:nodetypes="ccssscccccc"
+         style="fill:#664500;stroke-width:0.80584526"
+         inkscape:connector-curvature="0"
+         id="path28"
+         d="m 29.318846,4.1749231 c -0.958955,1.161223 -2.564199,1.5722041 -4.09047,1.7091978 -0.256259,-1.2393901 -1.356238,-5.84318401 -3.565059,-5.84318401 -1.936447,0 -2.634309,0.87917716 -3.626304,0.87917716 -0.991996,0 -1.689858,-0.87917716 -3.626305,-0.87917716 -2.208821,0 -3.3088,4.60379391 -3.565059,5.84318401 C 9.3193788,5.7471272 7.714135,5.3353402 6.7551791,4.1749231 5.0201943,2.0748903 2.7259528,3.6221132 3.8879817,5.9268307 c 1.8357155,3.640003 6.2759233,6.2017853 14.1490313,6.2017853 7.872302,0 12.31251,-2.5617823 14.14903,-6.2017853 1.162029,-2.3047175 -1.132212,-3.8519404 -2.867197,-1.7519076 z" />
+      <path
+         id="path30"
+         d="m 20.857471,1.6526274 c -1.506125,0 -2.049264,0.7768348 -2.820458,0.7768348 -0.771194,0 -1.314334,-0.7768348 -2.820459,-0.7768348 -1.984797,0 -2.820459,5.4394555 -2.820459,5.4394555 0,0 1.033094,1.8131518 5.640918,1.8131518 4.608629,0 5.640917,-1.8131518 5.640917,-1.8131518 0,0 -0.835662,-5.4394555 -2.820459,-5.4394555 z"
+         style="fill:#825d0e;stroke-width:0.80584526"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path32"
+         d="m 12.396095,4.0701632 c 0,0 1.671323,1.6116905 5.640918,1.6116905 3.970399,0 5.640917,-1.6116905 5.640917,-1.6116905 v 1.6116905 c 0,0 -1.790589,1.6116905 -5.640917,1.6116905 -3.85033,0 -5.640918,-1.6116905 -5.640918,-1.6116905 z"
+         style="fill:#664500;stroke-width:0.80584526"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

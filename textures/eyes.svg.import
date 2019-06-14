@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shop_bg.svg-f06871c19378ec852fec286d6a5f5040.stex"
+path="res://.import/eyes.svg-e220c6f00f19b66131602b83166a718d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/shop_bg.svg"
-dest_files=[ "res://.import/shop_bg.svg-f06871c19378ec852fec286d6a5f5040.stex" ]
+source_file="res://textures/eyes.svg"
+dest_files=[ "res://.import/eyes.svg-e220c6f00f19b66131602b83166a718d.stex" ]
 
 [params]
 
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=1.0
+svg/scale=5.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_arrow.svg-4e96cff9d9ff03055bbf6ecce3eef7a1.stex"
+path="res://.import/flower_hat.svg-66c7c96dbac3c57451f9e4590ae1e9ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/menu_arrow.svg"
-dest_files=[ "res://.import/menu_arrow.svg-4e96cff9d9ff03055bbf6ecce3eef7a1.stex" ]
+source_file="res://sprites/hats/flower_hat.svg"
+dest_files=[ "res://.import/flower_hat.svg-66c7c96dbac3c57451f9e4590ae1e9ae.stex" ]
 
 [params]
 
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=1.0
+svg/scale=2.5
