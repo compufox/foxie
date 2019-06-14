@@ -21,7 +21,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-tracker="*res://scripts/tracker.gd"
+Tracker="*res://scripts/tracker.gd"
+Info="*res://scripts/info.gd"
 
 [node]
 

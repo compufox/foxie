@@ -7,7 +7,6 @@
 [ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=5]
 [ext_resource path="res://sprites/emoticon_svgs/heart.svg" type="Texture" id=6]
 
-
 [sub_resource type="VisualShaderNodeScalarFunc" id=1]
 function = 0
 

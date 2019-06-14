@@ -6,20 +6,24 @@ onready var tweener     = $tween
 onready var shop_shown  = $container/shop_shown
 onready var shop_hidden = $container/shop_hidden
 onready var shop        = $"container/shop and button"
+onready var fox         = get_tree().root.find_node("fox", true, false)
 
 var menu_shown = false
 
-func _process(delta):
-	count_label.set_text(str(tracker.pets))
+func _ready():
+	var counter = 0
 	
-	if tracker.pets >= 10 and shop_button.disabled:
-		shop_button.get_material().set_shader_param("enabled", true)
-		shop_button.disabled = false
+	
+	for item in $"container/shop and button/shop_bg/scroll_container/shop/".get_children():
+		item.get_node("button").connect("pressed", self, 
+		                                "_shop_item_selected",
+		                                [counter, Info.prices[counter]])
+		counter += 1
+
+func _process(delta):
+	count_label.set_text(str(Tracker.pets))
 
 func _on_shop_button_pressed():
-	
-	print(shop_hidden.position)
-	print(shop_shown.position)
 	if menu_shown:
 		hide_shop()
 	else:
@@ -63,3 +67,16 @@ func hide_shop():
 func _on_tween_completed(object, key):
 	if object == shop and menu_shown:
 		get_tree().paused = true
+
+func _shop_item_selected(item_num, item_price):
+	# 1-15 are faces,
+	# 17-NaN are hats
+	# 16 is the flower, which is already there but hidden
+	
+	if Tracker.pets >= item_price:
+		if item_num < 16:
+			fox.set_face(item_num)
+		elif item_num == 16:
+			fox.show_flower()
+		elif item_num > 16:
+			fox.set_hat(item_num)
