@@ -20,6 +20,7 @@ func _ready():
 		                                [counter, Info.prices[counter]])
 		counter += 1
 
+# warning-ignore:unused_argument
 func _process(delta):
 	count_label.set_text(str(Tracker.pets))
 
@@ -30,6 +31,7 @@ func _on_shop_button_pressed():
 		show_shop()
 
 func show_shop():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	tweener.interpolate_property(shop, "rect_position",
 	                             shop_hidden.position,
 	                             shop_shown.position,
@@ -46,6 +48,7 @@ func show_shop():
 	menu_shown = true
 
 func hide_shop():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	tweener.interpolate_property(shop, "rect_position",
 	                             shop_shown.position,
 	                             shop_hidden.position,
@@ -64,6 +67,7 @@ func hide_shop():
 	get_tree().paused = false
 
 
+# warning-ignore:unused_argument
 func _on_tween_completed(object, key):
 	if object == shop and menu_shown:
 		get_tree().paused = true

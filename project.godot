@@ -24,6 +24,10 @@ config/icon="res://icon.png"
 Tracker="*res://scripts/tracker.gd"
 Info="*res://scripts/info.gd"
 
+[display]
+
+window/size/width=600
+
 [node]
 
 name_num_separator=2
