@@ -107,7 +107,6 @@ shader_param/blur_amount = 3.5
 
 [node name="ui" type="CanvasLayer"]
 pause_mode = 2
-layer = 0
 script = ExtResource( 1 )
 
 [node name="container" type="Control" parent="."]
@@ -120,9 +119,13 @@ anchor_bottom = 1.0
 position = Vector2( -494, 0 )
 
 [node name="shop and button" type="Control" parent="container"]
+editor/display_folded = true
 margin_left = -494.0
 margin_right = -454.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="shop_button" type="Button" parent="container/shop and button"]
 material = SubResource( 2 )
@@ -163,7 +166,7 @@ scroll_horizontal_enabled = false
 
 [node name="shop" type="GridContainer" parent="container/shop and button/shop_bg/scroll_container"]
 margin_right = 396.0
-margin_bottom = 659.0
+margin_bottom = 787.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/vseparation = 15
@@ -209,17 +212,17 @@ align = 1
 
 [node name="shop_item_20" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 margin_left = 198.0
-margin_right = 282.0
+margin_right = 287.0
 margin_bottom = 113.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_20"]
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 78.0
 icon = ExtResource( 6 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_20"]
 margin_top = 82.0
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 113.0
 text = "Computer Fox
 - Free -"
@@ -227,8 +230,8 @@ align = 1
 
 [node name="shop_item_21" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
-margin_right = 381.0
+margin_left = 302.0
+margin_right = 386.0
 margin_bottom = 113.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_21"]
@@ -288,17 +291,17 @@ align = 1
 editor/display_folded = true
 margin_left = 198.0
 margin_top = 128.0
-margin_right = 282.0
+margin_right = 287.0
 margin_bottom = 258.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_9"]
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 78.0
 icon = ExtResource( 10 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_9"]
 margin_top = 82.0
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 113.0
 text = "Ace Fox
 - Free -"
@@ -306,9 +309,9 @@ align = 1
 
 [node name="shop_item_10" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
+margin_left = 302.0
 margin_top = 128.0
-margin_right = 381.0
+margin_right = 386.0
 margin_bottom = 258.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_10"]
@@ -367,17 +370,17 @@ align = 1
 editor/display_folded = true
 margin_left = 198.0
 margin_top = 273.0
-margin_right = 282.0
+margin_right = 287.0
 margin_bottom = 403.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_13"]
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 78.0
 icon = ExtResource( 14 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_13"]
 margin_top = 82.0
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 130.0
 text = "Gender
 Queer Fox
@@ -386,9 +389,9 @@ align = 1
 
 [node name="shop_item_14" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
+margin_left = 302.0
 margin_top = 273.0
-margin_right = 381.0
+margin_right = 386.0
 margin_bottom = 403.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_14"]
@@ -448,17 +451,17 @@ align = 1
 editor/display_folded = true
 margin_left = 198.0
 margin_top = 418.0
-margin_right = 282.0
+margin_right = 287.0
 margin_bottom = 531.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_17"]
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 78.0
 icon = ExtResource( 18 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_17"]
 margin_top = 82.0
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 113.0
 text = "Intersex Fox
 - Free -"
@@ -466,9 +469,9 @@ align = 1
 
 [node name="shop_item_18" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 editor/display_folded = true
-margin_left = 297.0
+margin_left = 302.0
 margin_top = 418.0
-margin_right = 381.0
+margin_right = 386.0
 margin_bottom = 531.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_18"]
@@ -525,26 +528,26 @@ align = 1
 [node name="shop_item_3" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
 margin_left = 198.0
 margin_top = 546.0
-margin_right = 282.0
+margin_right = 287.0
 margin_bottom = 659.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_3"]
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 78.0
 icon = ExtResource( 22 )
 
 [node name="label" type="Label" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_3"]
 margin_top = 82.0
-margin_right = 84.0
+margin_right = 89.0
 margin_bottom = 113.0
 text = "Cowboy Hat
 - 25 pets -"
 align = 1
 
 [node name="shop_item_4" type="VBoxContainer" parent="container/shop and button/shop_bg/scroll_container/shop"]
-margin_left = 297.0
+margin_left = 302.0
 margin_top = 546.0
-margin_right = 381.0
+margin_right = 386.0
 margin_bottom = 659.0
 
 [node name="button" type="Button" parent="container/shop and button/shop_bg/scroll_container/shop/shop_item_4"]
@@ -586,6 +589,9 @@ margin_left = -124.0
 margin_top = 20.0
 margin_right = -80.0
 margin_bottom = 60.0
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pet_lbl" type="Label" parent="container/h_box_container"]
 margin_top = 13.0
@@ -612,6 +618,73 @@ margin_bottom = -21.6177
 rect_pivot_offset = Vector2( 38, 35 )
 icon = ExtResource( 25 )
 
+[node name="info_popup" type="PopupDialog" parent="container"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -182.0
+margin_top = -184.0
+margin_right = 182.0
+margin_bottom = 184.0
+
+[node name="v_box_container" type="VBoxContainer" parent="container/info_popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 36.0
+margin_right = -31.0
+margin_bottom = -36.0
+
+[node name="rich_text_label" type="RichTextLabel" parent="container/info_popup/v_box_container"]
+margin_right = 302.0
+margin_bottom = 272.0
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "
+
+Splash Screen Godot Logo by the [url=https://godotengine.org]Godot Project[/url]
+
+Base Fox, Flower, and Hats are [url=https://github.com/twitter/twemoji]Twemoji by Twitter[/url]
+
+Slime Fox used with permission from [url=https://xenonfiber.space]XenonFiber[/url]
+
+Easter Egg Music by [url=https://www.youtube.com/watch?v=h6DNdop6pD8]senzawa[/url]
+
+
+
+            Made for the [url=https://itch.io/jam/uwu]Foxie Game Jam[/url]
+
+               thanks for playing uwu<3"
+text = "
+
+Splash Screen Godot Logo by the Godot Project
+
+Base Fox, Flower, and Hats are Twemoji by Twitter
+
+Slime Fox used with permission from XenonFiber
+
+Easter Egg Music by senzawa
+
+
+
+            Made for the Foxie Game Jam
+
+               thanks for playing uwu<3"
+
+[node name="button" type="Button" parent="container/info_popup/v_box_container"]
+margin_left = 127.0
+margin_top = 276.0
+margin_right = 174.0
+margin_bottom = 296.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Close"
+
 [node name="tween" type="Tween" parent="."]
 [connection signal="pressed" from="container/shop and button/shop_button" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="container/info_btn" to="." method="_on_info_btn_pressed"]
+[connection signal="meta_clicked" from="container/info_popup/v_box_container/rich_text_label" to="." method="_open_link"]
+[connection signal="pressed" from="container/info_popup/v_box_container/button" to="." method="_on_close_info"]
 [connection signal="tween_completed" from="tween" to="." method="_on_tween_completed"]

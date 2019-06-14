@@ -1,0 +1,4 @@
+Splash Screen (Game Jam header should be on windows laptop)
+Custom build engine for specific builds (target=release tools=no use_lto=yes disable_3d=yes)
+\ see https://docs.godotengine.org/en/3.1/development/compiling/optimizing_for_size.html
+    for list of modules that I can maybe disable to keep making the final exe smaller

@@ -7,6 +7,7 @@ onready var shop_shown  = $container/shop_shown
 onready var shop_hidden = $container/shop_hidden
 onready var shop        = $"container/shop and button"
 onready var fox         = get_tree().root.find_node("fox", true, false)
+onready var info_dialog = $"container/info_popup"
 
 var menu_shown = false
 
@@ -84,3 +85,18 @@ func _shop_item_selected(item_num, item_price):
 			fox.show_flower()
 		elif item_num > 17:
 			fox.set_hat(item_num - 18)
+
+func _on_info_btn_pressed():
+	shop_button.disabled = true
+	get_tree().paused = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	info_dialog.popup_centered()
+
+func _on_close_info():
+	shop_button.disabled = false
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	info_dialog.hide()
+
+func _open_link(link):
+	OS.shell_open(link)
