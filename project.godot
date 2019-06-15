@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="foxie"
+config/name="Patter"
 run/main_scene="res://_scenes/main.tscn"
 boot_splash/image="res://textures/splash.png"
 boot_splash/fullsize=false

@@ -112,9 +112,6 @@ script = ExtResource( 1 )
 [node name="container" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="shop_shown" type="Position2D" parent="container"]
 
@@ -648,8 +645,7 @@ margin_right = 302.0
 margin_bottom = 272.0
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "Godot Logo by the [url=https://godotengine.org]Godot Project[/url]
-
+bbcode_text = "
 Base Fox, Flower, and Hats are [url=https://github.com/twitter/twemoji]Twemoji by Twitter[/url]
 
 Slime Fox used with permission from [url=https://xenonfiber.space]XenonFiber[/url]
@@ -663,8 +659,7 @@ Easter Egg Music by [url=https://www.youtube.com/watch?v=h6DNdop6pD8]senzawa[/ur
             Made for the [url=https://itch.io/jam/uwu]Foxie Game Jam[/url]
 
                thanks for playing uwu<3"
-text = "Godot Logo by the Godot Project
-
+text = "
 Base Fox, Flower, and Hats are Twemoji by Twitter
 
 Slime Fox used with permission from XenonFiber
