@@ -1,5 +1,7 @@
 extends Node
 
+onready var bg_music = get_tree().root.find_node("music", true, false)
+
 var music = AudioStreamPlayer.new()
 var owo = preload("res://music/OWO.ogg")
 # warning-ignore:unused_class_variable
@@ -14,12 +16,15 @@ func _ready():
 	add_child(music)
 
 func play():
+	bg_music.set_stream_paused(true)
 	music.play()
 
 func stop():
+	bg_music.set_stream_paused(false)
 	music.stop()
 
 func music_finished():
+	bg_music.set_stream_paused(false)
 	played = true
 
 func not_playing():
