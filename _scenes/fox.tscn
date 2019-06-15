@@ -1,11 +1,13 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scripts/fox.gd" type="Script" id=1]
 [ext_resource path="res://sprites/foxes_base/fox_base.svg" type="Texture" id=2]
 [ext_resource path="res://sprites/emoticon_svgs/blush.svg" type="Texture" id=3]
 [ext_resource path="res://textures/eyes.svg" type="Texture" id=4]
-[ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=5]
-[ext_resource path="res://sprites/emoticon_svgs/heart.svg" type="Texture" id=6]
+[ext_resource path="res://sprites/emoticon_svgs/tear.svg" type="Texture" id=5]
+[ext_resource path="res://sprites/emoticon_svgs/flower.svg" type="Texture" id=6]
+[ext_resource path="res://sprites/emoticon_svgs/heart.svg" type="Texture" id=7]
+[ext_resource path="res://sfx/pat.wav" type="AudioStream" id=8]
 
 [sub_resource type="VisualShaderNodeScalarFunc" id=1]
 function = 0
@@ -150,16 +152,25 @@ texture = ExtResource( 4 )
 [node name="hat" type="Sprite" parent="."]
 position = Vector2( 0, -60 )
 
+[node name="tear" type="Sprite" parent="."]
+visible = false
+position = Vector2( -36, 30.3832 )
+texture = ExtResource( 5 )
+
 [node name="flower" type="Sprite" parent="."]
 visible = false
 position = Vector2( 42.9082, -43.6706 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="heart" type="Sprite" parent="."]
 visible = false
 material = SubResource( 12 )
 position = Vector2( -40.0445, -51.4427 )
 z_index = 1
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "sfx"
 [connection signal="body_entered" from="." to="." method="_on_fox_collision_entered"]
 [connection signal="body_exited" from="." to="." method="_on_fox_collision_exited"]

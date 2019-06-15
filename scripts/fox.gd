@@ -4,12 +4,14 @@ var happy_eyes  = preload("res://textures/nwn.svg")
 var normal_eyes = preload("res://textures/eyes.svg")
 var sad_eyes    = preload("res://textures/uwu.svg")
 
-onready var face = $face setget set_face
-onready var eyes = $eyes
-onready var heart = $heart
+onready var face   = $face setget set_face
+onready var eyes   = $eyes
+onready var heart  = $heart
 onready var flower = $flower
-onready var hat = $hat
-onready var blush = $blush
+onready var hat    = $hat
+onready var blush  = $blush
+onready var tear   = $tear
+onready var sfx    = $sfx
 
 onready var tree = get_tree()
 
@@ -39,12 +41,18 @@ func _process(delta):
 	
 		if being_pet and eyes.texture != happy_eyes and Tracker.not_playing():
 			eyes.set_texture(happy_eyes)
+			tear.hide()
 		elif not being_pet:
+			if sad_time > 15:
+				eyes.set_texture(sad_eyes)
+				tear.show()
+			
 			if not Tracker.not_playing():
 				Tracker.stop()
 
 func _on_fox_collision_entered(body):
 	if body.is_in_group("hand"):
+		sfx.play()
 		being_pet = true
 		sad_time = 0
 		Tracker.pets += 1
